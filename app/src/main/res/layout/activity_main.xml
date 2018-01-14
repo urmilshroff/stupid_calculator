@@ -23,7 +23,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/number02"
+            android:id="@+id/input02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/input01"
@@ -74,11 +74,23 @@
             android:id="@+id/calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/number02"
+            android:layout_below="@+id/input02"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="23dp"
+            android:onClick="onButtonClick"
             android:text="CALCULATE"
             android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/mult"
+            android:layout_marginBottom="51dp"
+            android:text="ANSWER"
+            android:textAlignment="center"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
