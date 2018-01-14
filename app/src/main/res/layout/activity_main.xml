@@ -6,13 +6,79 @@
     android:layout_height="match_parent"
     tools:context="com.urmilshroff.stupidcalculator.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <EditText
+            android:id="@+id/input01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:ems="10"
+            android:hint="First number"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/number02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/input01"
+            android:layout_below="@+id/mult"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Second number"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input01"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="Plus" />
+
+        <RadioButton
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/add"
+            android:layout_below="@+id/add"
+            android:text="Minus"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/sub"
+            android:layout_below="@+id/sub"
+            android:text="Divide by"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/mult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/divide"
+            android:layout_below="@+id/divide"
+            android:text="Times"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number02"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="CALCULATE"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
