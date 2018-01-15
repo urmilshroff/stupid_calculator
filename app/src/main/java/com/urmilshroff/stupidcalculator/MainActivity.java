@@ -16,22 +16,103 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
-
-    public void onButtonClick(View v)
+    public void onAddButtonClick(View v)
     {
         TextView t1;
         EditText e1;
         EditText e2;
         int num1, num2, ans;
 
-        e1 = (EditText) findViewById(R.id.input01);
-        e2 = (EditText) findViewById(R.id.input02);
+        e1=(EditText)findViewById(R.id.input01);
+        e2=(EditText)findViewById(R.id.input02);
 
-        t1 = (TextView) findViewById(R.id.output);
+        t1=(TextView)findViewById(R.id.output);
 
-        num1 = Integer.parseInt(e1.getText().toString());
-        num2 = Integer.parseInt(e2.getText().toString());
-        ans = num1 + num2;
+        num1=Integer.parseInt(e1.getText().toString());
+        num2=Integer.parseInt(e2.getText().toString());
+
+        ans=num1+num2;
+
+        t1.setText(Integer.toString(ans));
+    }
+
+    public void onSubButtonClick(View v)
+    {
+        TextView t1;
+        EditText e1;
+        EditText e2;
+        int num1, num2, ans;
+
+        e1=(EditText)findViewById(R.id.input01);
+        e2=(EditText)findViewById(R.id.input02);
+
+        t1=(TextView)findViewById(R.id.output);
+
+        num1=Integer.parseInt(e1.getText().toString());
+        num2=Integer.parseInt(e2.getText().toString());
+
+        ans=num1-num2;
+
+        t1.setText(Integer.toString(ans));
+    }
+
+    public void onMultButtonClick(View v)
+    {
+        TextView t1;
+        EditText e1;
+        EditText e2;
+        int num1, num2, ans;
+
+        e1=(EditText)findViewById(R.id.input01);
+        e2=(EditText)findViewById(R.id.input02);
+
+        t1=(TextView)findViewById(R.id.output);
+
+        num1=Integer.parseInt(e1.getText().toString());
+        num2=Integer.parseInt(e2.getText().toString());
+
+        ans=num1*num2;
+
+        t1.setText(Integer.toString(ans));
+    }
+
+    public void onDivButtonClick(View v)
+    {
+        TextView t1;
+        EditText e1;
+        EditText e2;
+        int num1, num2, ans;
+
+        e1=(EditText)findViewById(R.id.input01);
+        e2=(EditText)findViewById(R.id.input02);
+
+        t1=(TextView)findViewById(R.id.output);
+
+        num1=Integer.parseInt(e1.getText().toString());
+        num2=Integer.parseInt(e2.getText().toString());
+
+        ans=num1/num2;
+
+        t1.setText(Integer.toString(ans));
+    }
+
+    public void onModButtonClick(View v)
+    {
+        TextView t1;
+        EditText e1;
+        EditText e2;
+        int num1, num2, ans;
+
+        e1=(EditText)findViewById(R.id.input01);
+        e2=(EditText)findViewById(R.id.input02);
+
+        t1=(TextView)findViewById(R.id.output);
+
+        num1=Integer.parseInt(e1.getText().toString());
+        num2=Integer.parseInt(e2.getText().toString());
+
+        ans=num1%num2;
+
         t1.setText(Integer.toString(ans));
     }
 }

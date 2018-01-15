@@ -7,16 +7,19 @@
     tools:context="com.urmilshroff.stupidcalculator.MainActivity">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="8dp">
 
         <EditText
             android:id="@+id/input01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/output"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="59dp"
             android:ems="10"
             android:hint="First number"
             android:inputType="number"
@@ -27,68 +30,102 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/input01"
-            android:layout_below="@+id/mult"
-            android:layout_marginTop="20dp"
+            android:layout_below="@+id/input01"
+            android:layout_marginTop="18dp"
             android:ems="10"
             android:hint="Second number"
             android:inputType="number"
-            android:textAlignment="center" />
-
-        <RadioButton
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/input01"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
-            android:text="Plus" />
-
-        <RadioButton
-            android:id="@+id/sub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/add"
-            android:layout_below="@+id/add"
-            android:text="Minus"
-            android:textAlignment="center" />
-
-        <RadioButton
-            android:id="@+id/divide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/sub"
-            android:layout_below="@+id/sub"
-            android:text="Divide by"
-            android:textAlignment="center" />
-
-        <RadioButton
-            android:id="@+id/mult"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/divide"
-            android:layout_below="@+id/divide"
-            android:text="Times"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/calculate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/input02"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="23dp"
-            android:onClick="onButtonClick"
-            android:text="CALCULATE"
             android:textAlignment="center" />
 
         <TextView
             android:id="@+id/output"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:fontFamily="monospace"
+            android:text="ANSWER WILL BE DISPLAYED HERE"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/input02"
+            android:layout_below="@+id/input02"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="@color/orange"
+            android:onClick="onAddButtonClick"
+            android:text="+"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/subbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/input02"
+            android:layout_alignTop="@+id/addbutton"
+            android:backgroundTint="@color/teal"
+            android:onClick="onSubButtonClick"
+            android:text="-"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/multbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/addbutton"
+            android:layout_alignTop="@+id/modbutton"
+            android:layout_marginTop="55dp"
+            android:backgroundTint="@color/amber"
+            android:onClick="onMultButtonClick"
+            android:text="×"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/divbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/subbutton"
+            android:layout_alignTop="@+id/multbutton"
+            android:backgroundTint="@color/purple"
+            android:onClick="onDivButtonClick"
+            android:text="÷"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/modbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/cyan"
+            android:onClick="onModButtonClick"
+            android:text="%"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/madeby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/mult"
-            android:layout_marginBottom="51dp"
-            android:text="ANSWER"
+            android:layout_alignStart="@+id/multbutton"
+            android:layout_marginBottom="21dp"
+            android:fontFamily="monospace"
+            android:text="Made by Urmil Shroff"
             android:textAlignment="center"
             android:textSize="18sp" />
 
