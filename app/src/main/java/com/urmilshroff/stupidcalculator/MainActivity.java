@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -14,105 +15,91 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(this, "Stupid Calculator by Urmil Shroff", Toast.LENGTH_SHORT).show();
     }
 
     public void onAddButtonClick(View v)
     {
-        TextView t1;
         EditText e1;
         EditText e2;
-        int num1, num2, ans;
+        int num1,num2,ans;
 
         e1=(EditText)findViewById(R.id.input01);
         e2=(EditText)findViewById(R.id.input02);
-
-        t1=(TextView)findViewById(R.id.output);
 
         num1=Integer.parseInt(e1.getText().toString());
         num2=Integer.parseInt(e2.getText().toString());
 
         ans=num1+num2;
 
-        t1.setText(Integer.toString(ans));
+        Toast.makeText(this, "Answer is "+ans, Toast.LENGTH_SHORT).show();
     }
 
     public void onSubButtonClick(View v)
     {
-        TextView t1;
         EditText e1;
         EditText e2;
-        int num1, num2, ans;
+        int num1,num2,ans;
 
         e1=(EditText)findViewById(R.id.input01);
         e2=(EditText)findViewById(R.id.input02);
-
-        t1=(TextView)findViewById(R.id.output);
 
         num1=Integer.parseInt(e1.getText().toString());
         num2=Integer.parseInt(e2.getText().toString());
 
         ans=num1-num2;
 
-        t1.setText(Integer.toString(ans));
+        Toast.makeText(this, "Answer is "+ans, Toast.LENGTH_SHORT).show();
     }
 
     public void onMultButtonClick(View v)
     {
-        TextView t1;
         EditText e1;
         EditText e2;
-        int num1, num2, ans;
+        int num1,num2,ans;
 
         e1=(EditText)findViewById(R.id.input01);
         e2=(EditText)findViewById(R.id.input02);
-
-        t1=(TextView)findViewById(R.id.output);
 
         num1=Integer.parseInt(e1.getText().toString());
         num2=Integer.parseInt(e2.getText().toString());
 
         ans=num1*num2;
 
-        t1.setText(Integer.toString(ans));
+        Toast.makeText(this, "Answer is "+ans, Toast.LENGTH_SHORT).show();
     }
 
     public void onDivButtonClick(View v)
     {
-        TextView t1;
         EditText e1;
         EditText e2;
-        int num1, num2, ans;
+        int num1,num2,ans;
 
         e1=(EditText)findViewById(R.id.input01);
         e2=(EditText)findViewById(R.id.input02);
-
-        t1=(TextView)findViewById(R.id.output);
 
         num1=Integer.parseInt(e1.getText().toString());
         num2=Integer.parseInt(e2.getText().toString());
 
         ans=num1/num2;
 
-        t1.setText(Integer.toString(ans));
+        Toast.makeText(this, "Answer is "+ans, Toast.LENGTH_SHORT).show();
     }
 
     public void onModButtonClick(View v)
     {
-        TextView t1;
         EditText e1;
         EditText e2;
-        int num1, num2, ans;
+        int num1,num2,ans;
 
         e1=(EditText)findViewById(R.id.input01);
         e2=(EditText)findViewById(R.id.input02);
-
-        t1=(TextView)findViewById(R.id.output);
 
         num1=Integer.parseInt(e1.getText().toString());
         num2=Integer.parseInt(e2.getText().toString());
 
         ans=num1%num2;
 
-        t1.setText(Integer.toString(ans));
+        Toast.makeText(this, "Answer is "+ans, Toast.LENGTH_SHORT).show();
     }
 }

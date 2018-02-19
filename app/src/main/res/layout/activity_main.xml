@@ -37,18 +37,6 @@
             android:inputType="number"
             android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/output"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:fontFamily="monospace"
-            android:text="ANSWER WILL BE DISPLAYED HERE"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
         <Button
             android:id="@+id/addbutton"
             android:layout_width="wrap_content"
@@ -123,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/multbutton"
-            android:layout_marginBottom="21dp"
+            android:layout_marginBottom="44dp"
             android:fontFamily="monospace"
             android:text="Made by Urmil Shroff"
             android:textAlignment="center"
