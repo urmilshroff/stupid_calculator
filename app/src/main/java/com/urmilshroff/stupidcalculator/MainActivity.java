@@ -1,8 +1,7 @@
 package com.urmilshroff.stupidcalculator;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         EditText e1;
         EditText e2;
         int num1,num2,ans;
+        int a=4; //delete this later
         //String checknull1,checknull2;
 
         e1=(EditText)findViewById(R.id.input01);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         //checknull1=Integer.toString(num1);
         //checknull2=Integer.toString(num2);
 
-        if(num1.matches(""))
+        if(a==5)
         {
             Toast.makeText(this, "Empty", Toast.LENGTH_SHORT).show();
         }
